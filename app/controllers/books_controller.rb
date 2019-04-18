@@ -23,7 +23,7 @@ class BooksController < ApplicationController
   def update
   	book = Book.find(params[:id])
   	book.update(post_params)
-  	redirect_to book_path(book.id)
+  	redirect_to book_path(book.id), notice: "Book was succesfully"
   end
 
   def destroy
